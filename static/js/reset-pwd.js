@@ -1,4 +1,3 @@
-
 const passwordField = document.querySelector("#exampleInputPassword");
 const password2Field = document.querySelector("#exampleRepeatPassword");
 const resetBtn = document.querySelector("#resetBtn");

@@ -57,11 +57,13 @@ function getFeedback() {
       const name = Swal.getPopup().querySelector("#name").value;
       const email = Swal.getPopup().querySelector("#email").value;
       const phone = Swal.getPopup().querySelector("#phone").value;
-      const rating = Swal.getPopup().querySelector("input[name=rating]:checked")
-        .value;
+      const rating = Swal.getPopup().querySelector(
+        "input[name=rating]:checked"
+      ).value;
       const message = Swal.getPopup().querySelector("#message").value;
       var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-      var phonepattern=/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
+      var phonepattern =
+        /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
       if (!name) {
         Swal.showValidationMessage(`Name is missing`);
       } else if (!email) {
@@ -70,9 +72,9 @@ function getFeedback() {
         Swal.showValidationMessage(`Enter a valid email address`);
       } else if (!phone) {
         Swal.showValidationMessage(`Phone Number is missing`);
-      }else if (String(phone).search(phonepattern) == -1) {
+      } else if (String(phone).search(phonepattern) == -1) {
         Swal.showValidationMessage(`Enter a valid 10-digit phone number`);
-      }else if (!rating) {
+      } else if (!rating) {
         Swal.showValidationMessage(`Rating is missing`);
       } else if (!message) {
         Swal.showValidationMessage(`Feedback is missing`);

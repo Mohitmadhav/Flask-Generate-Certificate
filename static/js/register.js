@@ -27,7 +27,7 @@ emailField.addEventListener("keyup", (e) => {
           emailField.classList.add("is-invalid");
           emailFeedBackArea.style.display = "block";
           emailFeedBackArea.innerHTML = `<p class="text-center">${data.email_pattern_error}</p>`;
-        } else if(data.account_inactive){
+        } else if (data.account_inactive) {
           regitserBtn.disabled = true;
           emailField.classList.add("is-invalid");
           emailFeedBackArea.style.display = "block";
@@ -95,25 +95,26 @@ password2Field.addEventListener("keyup", (e) => {
   }
 });
 
-
 // for show password
 // for show password
-const togglePassword1 = document.querySelector('#togglePassword1');
-const togglePassword2 = document.querySelector('#togglePassword2');
-const password1 = document.querySelector('#exampleInputPassword');
-const password2 = document.querySelector('#exampleRepeatPassword');
+const togglePassword1 = document.querySelector("#togglePassword1");
+const togglePassword2 = document.querySelector("#togglePassword2");
+const password1 = document.querySelector("#exampleInputPassword");
+const password2 = document.querySelector("#exampleRepeatPassword");
 
-togglePassword1.addEventListener('click', function (e) {
+togglePassword1.addEventListener("click", function (e) {
   // toggle the type attribute
-  const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
-  password1.setAttribute('type', type);
+  const type =
+    password1.getAttribute("type") === "password" ? "text" : "password";
+  password1.setAttribute("type", type);
   // toggle the eye slash icon
-  this.classList.toggle('fa-eye-slash');
+  this.classList.toggle("fa-eye-slash");
 });
-togglePassword2.addEventListener('click', function (e) {
+togglePassword2.addEventListener("click", function (e) {
   // toggle the type attribute
-  const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
-  password2.setAttribute('type', type);
+  const type =
+    password2.getAttribute("type") === "password" ? "text" : "password";
+  password2.setAttribute("type", type);
   // toggle the eye slash icon
-  this.classList.toggle('fa-eye-slash');
+  this.classList.toggle("fa-eye-slash");
 });
